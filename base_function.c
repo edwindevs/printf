@@ -1,6 +1,6 @@
 
-#incude "main.h"
-
+#include "main.h"
+#include <stdarg.h>
 /**
  *print_hexaDec - prints a number in hexadecimal base
  *@l: va_list argumentsfrom _printf

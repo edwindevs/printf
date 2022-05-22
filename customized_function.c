@@ -45,7 +45,7 @@ int print_nonXter(va_list l, argz_x *f)
  *
  */
 
-int print_reverse(va_list l, arg_x *f)
+int print_reverse(va_list l, argz_x *f)
 {
 	int = 0, j;
 	char *s = va_arg(l, char *);
@@ -85,7 +85,7 @@ int print_rot13(va_list l, argz_x *f)
 			for (i = 0; i <= 52; i++)
 			{
 				if (s[j] == rot13[i])
-					_putchar(ROT!#[i]);
+					_putchar(ROT13[i]);
 			}
 		}
 	}

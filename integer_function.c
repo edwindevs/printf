@@ -8,7 +8,7 @@
  *Return: number of characters
  */
 
-int print_numz(va_list l, arg_x *f)
+int print_numz(va_list l, argz_x *f)
 {
 	int n = va_arg(l, int);
 	int ter = count_len(n);
