@@ -1,64 +1,48 @@
 
 #include "main.h"
-#include <stdarg.h>
 
 /**
+ * check_for_specifiers - checks if there is a valid format specifier
+ * @format: possible format specifier
  *
- *
- *
- *
- *
- *
+ * Return: pointer to valid function or NULL
  */
 
 int _printf(const char *format, ...)
 {
-	int i = 0;
+    int (*pfunc)(va_list, argz_x *);
+    const char *p;
+    va_list arguments;
+    argz_x argz = {0, 0, 0};
 
-	while (format[i] != '\0')
-	{
-		_putchar(format[i]);
-		i++;
-	}
+    register int count = 0;
 
-	/*
-	
-	va_list list;
-	int i, j;
-	int num = 0;
-
-	va_start(list, format);
-	
-	i = 0;
-	while (format[i] != '\0')
-	{
-		_putchar(format[i]);
-		if (format[i] != '%')
-		{
-			_putchar(format[i]);
-		}
-		else
-		{
-			if (format[i+1] == 'd')
-			{
-				i++;
-				num = va_arg(list, int);
-				while (num > 0)
-				{
-					_putchar('0' + (num % 10));
-					num /= 10;
-				}
-			}
-		}
-		i++;
-	}
-	va_end(list);
-*/
-	return (0);
-}
-
-int main(void)
-{
-	_printf("Hello worls\n");
-	return (0);
+    va_start(arguments, format);
+    if (!format || (format[0] == '%' && !format[1]))
+        return (-1);
+    if (format[0] == '%' && format[1] == ' ' && !format[2])
+        return (-1);
+    for (p = format; *p; p++)
+    {
+        if (*p == '%')
+        {
+            p++;
+            if (*p == '%')
+            {
+                count += _putchar('%');
+                continue;
+            }
+            while (get_varg(*p, &argz))
+                p++;
+            pfunc = access_print(*p);
+            count += (pfunc)
+                         ? pfunc(arguments, &argz)
+                         : _printf("%%%c", *p);
+        }
+        else
+            count += _putchar(*p);
+    }
+    _putchar(-1);
+    va_end(arguments);
+    return (count);
 }
