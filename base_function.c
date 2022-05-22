@@ -6,7 +6,7 @@
  *@l: va_list argumentsfrom _printf
  *@f: pointer to the struct argz that determines if a varg
  *is passed to _printf
- *Description: the function calls transform() which in turn 
+ *Description: the function calls transform() which in turn
  *transformst the input number into the correct base
  *
  * Return: the number of char printed
@@ -28,7 +28,7 @@ int print_hexaDec(va_list l, argz_x *f)
  *print_hexaDec_big - print a number in hexa base in uppercase
  *@l: va_list arguments from _printf
  *@f: pointer to the structthat determines if arg is passed
- *Description: the function calls transform() 
+ *Description: the function calls transform()
  *
  *Return: the number of char printed
  */

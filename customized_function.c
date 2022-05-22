@@ -47,7 +47,7 @@ int print_nonXter(va_list l, argz_x *f)
 
 int print_reverse(va_list l, argz_x *f)
 {
-	int = 0, j;
+	int j, i = 0;
 	char *s = va_arg(l, char *);
 
 	(void)f;

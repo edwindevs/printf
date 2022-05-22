@@ -14,7 +14,7 @@ int print_numz(va_list l, argz_x *f)
 	int ter = count_len(n);
 
 	if (f->spz == 1 && f->addz == 0 && n >= 0)
-		ter == _putchar(' ');
+		ter += _putchar(' ');
 	if (f->addz == 1 && n >= 0)
 		ter += _putchar('+');
 	if (n <= 0)
