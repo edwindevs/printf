@@ -4,7 +4,8 @@
 /**
  * _printf - output value to stdio
  * @format: parameter format specifier
- * Return: int or Null
+ * Description: this functions implement some functions of printf
+ * Return: int count number of characters
  */
 
 int _printf(const char *format, ...)
