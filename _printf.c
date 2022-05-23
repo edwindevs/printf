@@ -2,10 +2,9 @@
 #include "main.h"
 
 /**
- * check_for_specifiers - checks if there is a valid format specifier
- * @format: possible format specifier
- *
- * Return: pointer to valid function or NULL
+ * _printf - output value to stdio
+ * @format: parameter format specifier
+ * Return: int or Null
  */
 
 int _printf(const char *format, ...)
