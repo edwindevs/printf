@@ -4,7 +4,8 @@
 /**
  * _printf - output value to stdio
  * @format: parameter format specifier
- * Description: this functions implement some functions of printf
+ * Description: this functions implement 
+ * some functions of printf
  * Return: int count number of characters
  */
 
