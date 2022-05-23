@@ -7,7 +7,7 @@
  * @s: character that holds the varg specifier
  * @f: pointer to the struct argz in which we turn the argz on
  *
- * Return: 1 , 0 otherwise
+ * Return: int
  */
 int get_varg(char s, argz_x *f)
 {
