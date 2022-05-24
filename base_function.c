@@ -12,14 +12,14 @@
  */
 int print_hexaDec(va_list l, argz_x *f)
 {
-    unsigned int num = va_arg(l, unsigned int);
-    char *str = transform(num, 16, 1);
-    int count = 0;
+unsigned int num = va_arg(l, unsigned int);
+char *str = transform(num, 16, 1);
+int count = 0;
 
-    if (f->hTag == 1 && str[0] != '0')
-        count += _puts("0x");
-    count += _puts(str);
-    return (count);
+if (f->hTag == 1 && str[0] != '0')
+count += _puts("0x");
+count += _puts(str);
+return (count);
 }
 
 /**
@@ -34,14 +34,14 @@ int print_hexaDec(va_list l, argz_x *f)
  */
 int print_hexaDec_big(va_list l, argz_x *f)
 {
-    unsigned int num = va_arg(l, unsigned int);
-    char *str = transform(num, 16, 0);
-    int count = 0;
+unsigned int num = va_arg(l, unsigned int);
+char *str = transform(num, 16, 0);
+int count = 0;
 
-    if (f->hTag == 1 && str[0] != '0')
-        count += _puts("0X");
-    count += _puts(str);
-    return (count);
+if (f->hTag == 1 && str[0] != '0')
+count += _puts("0X");
+count += _puts(str);
+return (count);
 }
 
 /**
@@ -55,11 +55,11 @@ int print_hexaDec_big(va_list l, argz_x *f)
  */
 int print_bin(va_list l, argz_x *f)
 {
-    unsigned int num = va_arg(l, unsigned int);
-    char *str = transform(num, 2, 0);
+unsigned int num = va_arg(l, unsigned int);
+char *str = transform(num, 2, 0);
 
-    (void)f;
-    return (_puts(str));
+(void)f;
+return (_puts(str));
 }
 
 /**
@@ -73,13 +73,13 @@ int print_bin(va_list l, argz_x *f)
  */
 int print_base(va_list l, argz_x *f)
 {
-    unsigned int num = va_arg(l, unsigned int);
-    char *str = transform(num, 8, 0);
-    int count = 0;
+unsigned int num = va_arg(l, unsigned int);
+char *str = transform(num, 8, 0);
+int count = 0;
 
-    if (f->hTag == 1 && str[0] != '0')
-        count += _putchar('0');
-    count += _puts(str);
-    return (count);
+if (f->hTag == 1 && str[0] != '0')
+count += _putchar('0');
+count += _puts(str);
+return (count);
 }
 
